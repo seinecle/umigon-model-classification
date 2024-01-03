@@ -33,7 +33,8 @@ public class LanguageSpecificLexicons {
     Set<String> setNegations;
     Set<String> setTimeTokens;
     Set<String> setHashTags;
-    Set<String> setModerators;
+    Set<String> setModeratorsForward;
+    Set<String> setModeratorsBackward;
     Set<String> setStrong;
     Set<String> setSubjective;
     Set<String> setFalsePositiveOpinions;
@@ -183,13 +184,23 @@ public class LanguageSpecificLexicons {
         this.setHashTags = setHashTags;
     }
 
-    public Set<String> getSetModerators() {
-        return setModerators;
+    public Set<String> getSetModeratorsForward() {
+        return setModeratorsForward;
     }
 
-    public void setSetModerators(Set<String> setModerators) {
-        this.setModerators = setModerators;
+    public void setSetModeratorsForward(Set<String> setModeratorsForward) {
+        this.setModeratorsForward = setModeratorsForward;
     }
+
+    public Set<String> getSetModeratorsBackward() {
+        return setModeratorsBackward;
+    }
+
+    public void setSetModeratorsBackward(Set<String> setModeratorsBackward) {
+        this.setModeratorsBackward = setModeratorsBackward;
+    }
+    
+    
 
     public Set<String> getSetStrong() {
         return setStrong;

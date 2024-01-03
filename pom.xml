@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>net.clementlevallois.functions</groupId>
+    <parent>
+        <groupId>net.clementlevallois.functions</groupId>
+        <artifactId>parentbuild</artifactId>
+        <version>1.0</version>
+    </parent>   
     <artifactId>umigon-model-classification</artifactId>
     <version>0.10</version>
     <packaging>jar</packaging>
@@ -10,15 +14,13 @@
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
     </properties>
-	
-	<dependencies>
-		<dependency>
-			<groupId>net.clementlevallois.functions</groupId>
-			<artifactId>umigon-model</artifactId>
-			<version>0.13</version>
-		</dependency>
-	</dependencies>
-
+    <dependencies>
+        <dependency>
+            <groupId>net.clementlevallois.functions</groupId>
+            <artifactId>umigon-model</artifactId>
+            <version>0.15</version>
+        </dependency>
+    </dependencies>
     <name>umigon-model-classification</name>
 
     <description>the data structure for classification operations by the tools of umigon-family</description>

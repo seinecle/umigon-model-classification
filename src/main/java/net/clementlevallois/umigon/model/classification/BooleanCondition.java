@@ -65,7 +65,10 @@ public class BooleanCondition implements Serializable {
         isPrecededByStrongWord,
         isFirstLetterCapitalized,
         isNegationInCaps,
-        isASentenceLikeFragmentEnclosedInQuotationsOrParentheses
+        isNegationAloneInLastSentenceFragment,
+        isASentenceLikeFragmentEnclosedInQuotationsOrParentheses,
+        isImmediatelyPrecededByStrongWord,
+        isImmediatelyPrecededBySubjectiveTerm
     }
 
     public BooleanConditionEnum getBooleanConditionEnum() {
