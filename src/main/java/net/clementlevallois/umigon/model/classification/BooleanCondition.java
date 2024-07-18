@@ -35,6 +35,8 @@ public class BooleanCondition implements Serializable {
         isImmediatelyFollowedByANegation,
         isImmediatelyPrecededBySpecificTerm,
         isImmediatelyFollowedBySpecificTerm,
+        isImmediatelyFollowedByStrongWord,
+        isImmediatelyFollowedBySubjectiveTerm,
         isImmediatelyFollowedByPositivePriorAssociation,
         isImmediatelyFollowedByNegativePriorAssociation,
         isImmediatelyPrecededByPositivePriorAssociation,
@@ -68,7 +70,9 @@ public class BooleanCondition implements Serializable {
         isNegationAloneInLastSentenceFragment,
         isASentenceLikeFragmentEnclosedInQuotationsOrParentheses,
         isImmediatelyPrecededByStrongWord,
-        isImmediatelyPrecededBySubjectiveTerm
+        isImmediatelyPrecededBySubjectiveTerm,
+        isStartOfSegment
+     
     }
 
     public BooleanConditionEnum getBooleanConditionEnum() {
