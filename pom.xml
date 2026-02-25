@@ -1,31 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <parent>
-        <groupId>net.clementlevallois.functions</groupId>
-        <artifactId>parentbuild</artifactId>
-        <version>1.0</version>
-    </parent>   
+
+    <groupId>net.clementlevallois.functions</groupId>
     <artifactId>umigon-model-classification</artifactId>
     <version>0.10</version>
     <packaging>jar</packaging>
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
-    <dependencies>
-        <dependency>
-            <groupId>net.clementlevallois.functions</groupId>
-            <artifactId>umigon-model</artifactId>
-            <version>0.15</version>
-        </dependency>
-    </dependencies>
-    <name>umigon-model-classification</name>
 
+    <name>umigon-model-classification</name>
     <description>the data structure for classification operations by the tools of umigon-family</description>
     <url>https://github.com/seinecle/umigon-model-classification</url>
     <inceptionYear>2021</inceptionYear>
-    
-    <!-- Licenses -->
+
     <licenses>
         <license>
             <name>Creative Commons Attribution 4.0 International Public License</name>
@@ -34,14 +20,12 @@
         </license>
     </licenses>
 
-    <!-- SCM -->
     <scm>
         <connection>scm:git:git@github.com:seinecle/umigon-model-classification.git</connection>
         <developerConnection>scm:git:git@github.com:seinecle/umigon-model-classification.git</developerConnection>
         <url>https://github.com/seinecle/umigon-family-classification</url>
     </scm>
-    
-    <!-- Developers -->
+
     <developers>
         <developer>
             <id>seinecle</id>
@@ -50,7 +34,20 @@
         </developer>
     </developers>
 
-    <!-- Build -->
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>net.clementlevallois.functions</groupId>
+            <artifactId>umigon-model</artifactId>
+            <version>0.15</version>
+        </dependency>
+    </dependencies>
+
     <build>
         <plugins>
             <plugin>
@@ -81,16 +78,16 @@
                         <version>9.4</version>
                     </dependency>
                 </dependencies>
-            </plugin>        
+            </plugin>
         </plugins>
     </build>
-    <!-- Profile to publish to Maven Central-->
+
     <profiles>
         <profile>
             <id>release</id>
             <properties>
                 <altDeploymentRepository>local::file:./target/staging-deploy</altDeploymentRepository>
-            </properties>            
+            </properties>
             <build>
                 <defaultGoal>deploy</defaultGoal>
                 <plugins>
@@ -109,7 +106,6 @@
                             <encoding>UTF-8</encoding>
                         </configuration>
                     </plugin>
-
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-javadoc-plugin</artifactId>
@@ -154,7 +150,7 @@
                                         <nexus2>
                                             <maven-central>
                                                 <active>ALWAYS</active>
-                                                <url>https://s01.oss.sonatype.org/service/local</url>;
+                                                <url>https://s01.oss.sonatype.org/service/local</url>
                                                 <closeRepository>true</closeRepository>
                                                 <releaseRepository>true</releaseRepository>
                                                 <stagingRepositories>target/staging-deploy</stagingRepositories>
